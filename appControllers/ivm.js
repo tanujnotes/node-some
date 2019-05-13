@@ -44,7 +44,7 @@ class AppController {
     }
     if (!query_city || !isNaN(query_city)) {
       return res.status(200).send(
-        { "message": "Please send a valid text query. Example: http://localhost:5000/suggestions?q=london" }
+        { "message": "Please send a valid text query. Example: http://ec2-13-234-30-4.ap-south-1.compute.amazonaws.com/suggestions?q=london" }
       );
     }
 
@@ -132,7 +132,7 @@ class AppController {
     return res.status(200).send(
       {
         "message": "Hey there! Please make a valid request.",
-        "example": "http://localhost:5000/suggestions?q=new%20york&latitude=19.0760&longitude=72.8777",
+        "example": "http://ec2-13-234-30-4.ap-south-1.compute.amazonaws.com/suggestions?q=new%20york&latitude=19.0760&longitude=72.8777",
         "parameters": "q(string, mandatory), latitude(float, optional), longitude(float, optional)"
       }
     );
